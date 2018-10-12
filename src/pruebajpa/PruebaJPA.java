@@ -19,11 +19,13 @@ public class PruebaJPA {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        FEO.Company c=new FEO.Company();
-        c.setName("mateo");
-        c.setEmail("pepe@hotmail.com");
-        c.setPassword("123");
-        FacadeFactory.getFacade("jpa").insert(c);
+//        FEO.Company c=new FEO.Company();
+//        c.setName("mateo");
+//        c.setEmail("pepe@hotmail.com");
+//        c.setPassword("123");
+//        FacadeFactory.getFacade("jpa").insert(c);
+
+        System.out.println(FacadeFactory.getFacade("jpa").read().toString());
     }
     
 }

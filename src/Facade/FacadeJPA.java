@@ -6,6 +6,7 @@
 package Facade;
 
 import FEO.Company;
+import java.util.ArrayList;
 import pruebajpa.DAO;
 
 /**
@@ -28,8 +29,11 @@ public class FacadeJPA implements iFacade {
     }
 
     @Override
-    public void read() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ArrayList<Company> read() {
+        DAO d=new DAO();
+        return d.shit2();
     }
+
+   
 
 }

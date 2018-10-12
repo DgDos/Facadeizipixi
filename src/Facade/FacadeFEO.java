@@ -8,6 +8,7 @@ package Facade;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -31,8 +32,14 @@ public class FacadeFEO implements iFacade {
     }
 
     @Override
-    public void read() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ArrayList<FEO.Company> read() {
+        try {
+            FEO.CompanyDAO cd=new FEO.CompanyDAO("bistock");
+            return cd.getAllCompanys();
+        } catch (SQLException | URISyntaxException | ClassNotFoundException | IOException ex) {
+            Logger.getLogger(FacadeFEO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
 
 }

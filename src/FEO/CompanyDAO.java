@@ -160,7 +160,7 @@ public class CompanyDAO {
 
         ArrayList<Company> companys = new ArrayList<>();
         Statement statement = connection.createStatement();
-        ResultSet rs = statement.executeQuery("select * from company where deleted=false");
+        ResultSet rs = statement.executeQuery("select * from company");
         while (rs.next()) {
             Company company = new Company();
             company.setCompany_id(rs.getInt("company_id"));

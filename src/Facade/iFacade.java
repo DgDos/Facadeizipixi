@@ -5,11 +5,13 @@
  */
 package Facade;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author FiJus
  */
 public interface iFacade {
     public void insert(Object o);
-    public void read();
+    public ArrayList<FEO.Company> read();
 }
